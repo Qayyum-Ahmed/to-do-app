@@ -15,7 +15,7 @@ export default function EditTopicForm(params:any){
                 headers: {
                     "Content-type": "application/json",
                 },
-                body: JSON.stringify({newTitle:ntitle,newDescription:ndesc}),
+                body: JSON.stringify({newTitle:ntitle,newDescription:ndesc,Completed:params.Completed}),
             });
             if (!res.ok){
                 throw new Error("Failed to Update")

@@ -21,7 +21,7 @@ export default function AddTopic(){
                 headers: {
                     "Content-type":"Application/json",
                 },
-                body: JSON.stringify({title,description})
+                body: JSON.stringify({title,description,Completed:false})
             });
 
             if (res.ok){

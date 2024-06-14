@@ -13,8 +13,8 @@ const getTopicByID=async(id:any)=>{
 export default async function EditTopic({params}:any){
     const {id}=params;
     const {topic}=await getTopicByID(id);
-    const {title,description}=topic[0];
+    const {title,description,Completed}=topic;
     return (<div>
-        <EditTopicForm id={id} title={title} description={description}/>
+        <EditTopicForm id={id} title={title} description={description} Completed={Completed}/>
     </div>)
 }
